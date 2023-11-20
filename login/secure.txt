@@ -1,0 +1,11 @@
+Hashing Passwords:
+
+SQL Injection Prevention: 
+
+Captcha Verification:
+
+Two-Factor Authentication (2FA): 
+
+Limit Login Attempts
+
+SSL/TLS:

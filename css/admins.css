@@ -1,0 +1,506 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --purple:#4934cf98;
+    --red:#c0392b;
+    --orange:#f39c12;
+    --black:#333;
+    --white:#fff;
+    --light-color:#666;
+    --light-white:#ccc;
+    --light-bg:#f5f5f5;
+    --border:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+ }
+ 
+ *{
+    font-family: 'Rubik', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition:all .2s linear;
+ }
+ 
+ *::selection{
+    background-color: var(--purple);
+    color:var(--white);
+ }
+ 
+ *::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+ }
+ 
+ *::-webkit-scrollbar-track{
+    background-color: transparent;
+ }
+ 
+ *::-webkit-scrollbar-thumb{
+    background-color: var(--purple);
+ }
+ 
+ html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+ }
+ 
+
+ 
+body{
+  background: rgb(226, 226, 226);
+}
+nav{
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 90px;
+  width: 280px;
+  background: #fff;
+  overflow: hidden;
+  transition: 1s;
+}
+/* nav:hover{
+  width: 280px;
+  transition: 1s;
+} */
+.logo{
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
+}
+
+.logo img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.logo span{
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+a{
+  position: relative;
+  
+  font-size: 14px;
+  color: rgb(85, 83, 83);
+  display: table;
+  padding: 10px;
+}
+nav .fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+a:hover{
+  background: #eee;
+}
+a:hover i{
+  color: #34AF6D;
+  transition: 0.5s;
+}
+.logout{
+  position: absolute;
+  bottom: 0;
+}
+
+.container{
+  display: flex;
+}
+
+/* MAin Section */
+.main{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+.main-top{
+  display: flex;
+  width: 100%;
+}
+.main-top i{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+.main .users{
+  display: flex;
+  width: 100%;
+}
+.users .card{
+  width: 25%;
+  margin: 10px;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.users .card img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.users .card h4{
+  text-transform: uppercase;
+}
+.users .card p{
+  font-size: 12px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.users table{
+  margin:  auto;
+}
+.users .per span{
+  padding: 5px;
+  border-radius: 10px;
+  background: rgb(223, 223, 223);
+}
+.users td{
+  font-size: 14px;
+  padding-right: 15px;
+}
+.users .card button{
+  width: 100%;
+  margin-top: 8px;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #4AD489;
+}
+.users .card button:hover{
+  background: #4AD489;
+  color: #fff;
+  transition: 0.5s;
+}
+
+/*Attendance List serction  */
+.attendance{
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+.attendance-list{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.table{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+table thead tr{
+  color: #fff;
+  background: #34AF6D;
+  text-align: left;
+  font-weight: bold;
+}
+.table th,
+.table td{
+  padding: 12px 15px;
+}
+.table tbody tr{
+  border-bottom: 1px solid #ddd;
+}
+.table tbody tr:nth-of-type(odd){
+  background: #f3f3f3;
+}
+.table tbody tr.active{
+  font-weight: bold;
+  color: #4AD489;
+}
+.table tbody tr:last-of-type{
+  border-bottom: 2px solid #4AD489;
+}
+.table button{
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #4AD489;
+}
+.table button:hover{
+  background: #4AD489;
+  color: #fff;
+  transition: 0.5rem;
+}
+
+
+/* ..........................................masssage and btn...........*/
+.message{
+    position: sticky;
+    top:0;
+    margin:0 auto;
+    max-width: 1200px;
+    background-color: var(--light-bg);
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    gap:1.5rem;
+    background: url(../images/sus.png) left center no-repeat;
+    
+     
+    
+     background-size: 18px;
+     padding-left: 2.7rem;
+   
+     opacity: 0.9;
+ }
+ 
+ .message span{
+    font-size: 2rem;
+    color:green;
+ }
+ 
+ .message i{
+    cursor: pointer;
+    color:var(--red);
+    font-size: 2.5rem;
+ }
+ 
+ .message i:hover{
+    transform: rotate(90deg);
+ }
+ 
+ 
+ .message_1{
+    position: sticky;
+    top:0;
+    margin:0 auto;
+    max-width: 1200px;
+    background-color: var(--light-bg);
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    gap:1.5rem;
+    background: url(../images/index.jpg) left center no-repeat;
+    
+ 
+    
+     background-size: 18px;
+     padding-left: 2.7rem;
+   
+     opacity: 0.9;
+ 
+ }
+ 
+ .message_1 span{
+    font-size: 2rem;
+    color: #e54053;
+ }
+ 
+ .message_1 i{
+    cursor: pointer;
+    color:var(--red);
+    font-size: 2.5rem;
+ }
+ 
+ .message_1 i:hover{
+    transform: rotate(90deg);
+ }
+ 
+ 
+ .btn,
+.option-btn,
+.delete-btn,
+.white-btn
+{
+   display: inline-block;
+   margin-top: 1rem;
+   padding:1rem 2rem;
+   cursor: pointer;
+   color:var(--white);
+   font-size: 1rem;
+   border-radius: .5rem;
+   text-transform: capitalize;
+}
+
+ .btn:hover,
+ .option-btn:hover,
+ .delete-btn:hover{
+    background-color: var(--black);
+ }
+ 
+ .white-btn,
+ .btn{
+     background-color: var(--orange);
+ }
+ 
+ .option-btn{
+    background-color: var(--orange);
+ }
+ 
+ .delete-btn{
+    background-color: var(--red);
+ }
+ 
+ .white-btn:hover{
+    background-color: var(--white);
+    color:var(--black);
+ }
+ 
+ @keyframes fadeIn {
+    0%{
+       transform: translateY(1rem);
+       opacity: .2s;
+    }
+ }
+
+ /* ................................form.................. */
+
+ .form-container{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:20px;
+  padding-bottom: 70px;
+}
+
+.form-container form{
+  width: 100rem;
+  border-radius: 5px;
+  border:var(--border);
+  padding:20px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.form-container form h3{
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color:var(--black);
+}
+
+.form-container form .box{
+  width: 100%;
+  border-radius: 5px;
+  border:var(--border);
+  padding:12px 14px;
+  font-size: 18px;
+  margin:10px 0;
+}
+
+.form-container form p{
+  margin-top: 20px;
+  font-size: 20px;
+  color:var(--black);
+}
+
+.form-container form p a{
+  color:var(--red);
+}
+
+.form-container form p a:hover{
+  text-decoration: underline;
+}
+
+
+.form-container form .flex{
+  display: flex;
+  gap:1.5rem;
+  flex-wrap: wrap;
+}
+
+.form-container form .flex .inputBox{
+  flex:1 1 25rem;
+} 
+/* .............................add-products...end...update..start....... */
+
+.form-container1{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:20px;
+  padding-bottom: 70px;
+}
+
+.form-container1 form{
+  width: 100rem;
+  border-radius: 5px;
+  border:var(--border);
+  padding:20px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.form-container1 form h3{
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color:var(--black);
+}
+
+.form-container1 form .box{
+  width: 100%;
+  border-radius: 5px;
+  border:var(--border);
+  padding:12px 14px;
+  font-size: 18px;
+  margin:10px 0;
+}
+
+.form-container1 form p{
+  margin-top: 20px;
+  font-size: 20px;
+  color:var(--black);
+}
+
+.form-container1 form p a{
+  color:var(--red);
+}
+
+.form-container1 form p a:hover{
+  text-decoration: underline;
+}
+
+
+.form-container1 form .flex{
+  display: flex;
+  gap:1.5rem;
+  flex-wrap: wrap;
+}
+
+.form-container1 form .flex .inputBox{
+  flex:1 1 25rem;
+} 
