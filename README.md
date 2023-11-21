@@ -1,3 +1,3 @@
 # -BakerySewa
 
-Online Cake Sewa using html css javascript and php
+Online BakerySewa using html css javascript and php
